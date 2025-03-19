@@ -15,13 +15,13 @@ public interface UserService {
 
     public User updateUsersProjectSize(User user,int number);
 
-//	public List<User> findAllUsers();
+	//public List<User> findAllUsers();
 
-//	public List<User> getPenddingRestaurantOwner();
+	//public List<User> getPenddingRestaurantOwner();
 
     void updatePassword(User user, String newPassword);
 
     void sendPasswordResetEmail(User user);
 
-//	void sendPasswordResetEmail(User user);
+    //void sendPasswordResetEmail(User user);
 }
