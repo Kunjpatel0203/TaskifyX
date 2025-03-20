@@ -53,8 +53,8 @@ const ProjectList = () => {
   const tag = searchParams.get("tag");
   const [keyword, setKeyword] = useState("");
 
-  const { project,auth } = useSelector((store) => store);
-
+  const auth = useSelector((store) => store.auth);
+  const project = useSelector((store) => store.project);
   useEffect(() => {
     dispatch(fetchProjects({ category, tag }));
   }, [category, tag,auth.jwt]);
@@ -145,7 +145,7 @@ const ProjectList = () => {
           <div className="flex gap-2 items-center pb-5 justify-between">
             <div className="relative p-0 w-full">
               <Input
-                className="w-[40%] rounded-fulls px-9"
+                className="w-[40%] rounded-full px-9"
                 placeholder="search project..."
                 onChange={handleSearchChange}
               />
@@ -153,8 +153,8 @@ const ProjectList = () => {
             </div>
 
             <Sheet className=" lg:hidden">
-              <SheetTrigger>
-                <Button className="" variant="ghost" size="icon">
+              <SheetTrigger asChild>
+                <Button className="lg:hidden" variant="ghost" size="icon">
                   <MixerHorizontalIcon />
                 </Button>
               </SheetTrigger>
