@@ -40,7 +40,6 @@ public class AppConfig {
             @Override
             public CorsConfiguration getCorsConfiguration(
                     HttpServletRequest request) {
-                // TODO Auto-generated method stub
                 CorsConfiguration cfg = new CorsConfiguration();
 
                 cfg.setAllowedOrigins(Arrays.asList(
